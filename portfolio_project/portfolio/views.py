@@ -1,20 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post
 
 
 # Create your views here.
-def post_list(request):
-    posts = Post.published.all()
+def portfolio_page(request):
     return render(request,
-                  'portfolio/post/list.html',
-                  {'posts': posts})
-
-
-def post_detail(request, id):
-    post = get_object_or_404(Post,
-                             id=id,
-                             status=Post.Status.PUBLISHED)
-
-    return render(request,
-                  'portfolio/post/detail.html',
-                  {'post': post})
+                  'portfolio/portfolio_page.html',
+                  {'js': 'js/portfolio_page.js', 'css': 'css/portfolio_page.css'})

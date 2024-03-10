@@ -1,0 +1,32 @@
+/* background color (purple): hex(#3C004B) and RGB(60, 0, 75)
+   Text color (gold): hex(#DDA959) */
+.navbar{
+    background-color: #3C004B;
+    height: auto;
+    font-family: "Big Shoulders Inline Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: 30px;
+    font-style: normal;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-brand .navbar-item .nav-burger{
+    min-height: 100%;
+}
+
+.navbar-item{
+    color: #DDA959;
+}
+
+#logo{
+    min-height: 70px;
+    min-width: 70px;
+}
+
+
+.content-class{
+    margin: 0;
+    padding: 0;
+}
