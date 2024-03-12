@@ -5,13 +5,27 @@
 {% block content %}
     <div class="container_main">
         <div id="container-1" class="container-item" >
-            <img class="background_image" src="{% static 'images/background_1.jpg' %}" alt="background_1">
+            <div class="background-image" style="background-image: url('{% static 'images/background_1.jpg' %}')">
+                <div class="container-content-1">
+                    <div class="container-content-1-box">
+                        <div class="container-content-1-box-content">
+                            <h1 id="name">Anishkumar Rasik Dhamelia</h1>
+                            <p id="title" style="font-size: 2.5vw;">software developer</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="container-2" class="container-item">
-
+             <div class="background-image" style="background-image: url('{% static 'images/background_2.jpg' %}')">
+                <!-- Content goes here -->
+            </div>
         </div>
         <div id="container-3" class="container-item">
-
+             <div class="background-image" style="background-image: url('{% static 'images/background_3.jpg' %}')">
+                <!-- Content goes here -->
+            </div>
         </div>
 
     </div>

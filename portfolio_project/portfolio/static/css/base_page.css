@@ -1,5 +1,6 @@
-/* background color (purple): hex(#3C004B) and RGB(60, 0, 75)
+/* background color (purple): hex(#220026) and rgb(34, 0, 38)
    Text color (gold): hex(#DDA959) */
+
 body {
     margin: 0;
     padding: 0;
@@ -10,13 +11,14 @@ html {
     overflow-y: scroll;
 }
 .navbar {
-    background-color: #3C004B;
+    background-color: #220026;
     height: auto;
     font-family: "Big Shoulders Inline Display", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 900;
-    font-size: 30px;
+    font-weight: 700;
+    font-size: 1.5vw;
     font-style: normal;
+    opacity: 0.9;
 }
 
 .navbar-brand .navbar-item .nav-burger {
@@ -28,6 +30,6 @@ html {
 }
 
 #logo {
-    min-height: 70px;
-    min-width: 70px;
+    min-height: 4vw;
+    min-width: 4vw;
 }

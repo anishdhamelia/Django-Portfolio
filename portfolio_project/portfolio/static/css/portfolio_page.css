@@ -1,3 +1,6 @@
+/* background color (purple): hex(#220026) and rgb(34, 0, 38)
+   Text color (gold): hex(#DDA959) */
+
 .container-item {
     height: 100vh;
     scroll-snap-align: start;
@@ -15,8 +18,42 @@
     background-color: green;
 }
 
-.background_image {
+.background-image {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-content-1 {
+    height: 100vh;
+    width: 100vh;
+}
+
+.container-content-1-box {
+    font-family: "Big Shoulders Inline Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 5vw;
+    font-style: normal;
+    height: 45vh;
+    color: #DDA959;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-content-1-box-content {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
