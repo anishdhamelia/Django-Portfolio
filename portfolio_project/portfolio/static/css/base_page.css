@@ -4,6 +4,8 @@
 body {
     margin: 0;
     padding: 0;
+    min-width: 1000px;
+    min-height: 1000px;
 }
 
 html {

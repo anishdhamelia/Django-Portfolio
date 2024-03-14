@@ -63,15 +63,12 @@
 .container-content-2 {
     height: 80%;
     width: 90%;
-    background-color: #220026;
-    opacity: 0.8;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
     margin-top: 5%;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    opacity: 0;
 }
 
 .container-content-2-item {
@@ -88,6 +85,11 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-color: #220026;
+    opacity: 0.9;
+    padding: 1%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
 }
 
 #about-name {
@@ -101,8 +103,8 @@
 }
 
 #about-quote-box {
-    height: 40vh;
-    width: 100vh;
+    height: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,10 +131,15 @@
 }
 
 .education-box {
-    margin: 5%;
+    margin: 2%;
     width: 90%;
-    height: 50%;
     transition: transform 0.3s ease;
+    background-color: #220026;
+    opacity: 0.9;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    height: auto;
 }
 
 .education-box:hover {
@@ -140,34 +147,58 @@
     cursor: pointer;
 }
 
+.degree-image {
+    border-radius: 10px;
+    object-fit: cover;
+    height: auto;
+    display: block;
+}
+
 .popup-container {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
     width: 100%;
     height: 100%;
-    padding: 5%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 999;
+    border-radius: 20px;
+    background-color: #220026;
     justify-content: center;
     align-items: center;
+    padding: 3%;
 }
 
 .popup {
     position: relative;
-    background-color: #fff;
-    padding: 20px;
-    max-width: 80%;
-    max-height: 80%;
-    overflow: auto;
+    width: 100%; /* Ensure image fits container width */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
+#popup-image {
+    width: 84%; /* Ensure image fits container width */
+    height: 85%;
+    border-radius: 20px;
+}
+
+#popup-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Big Shoulders Inline Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #DDA959;
+    font-size: 2vw;
+    width: 100%;
+}
+
+.popup-info-text {
+    margin: 5%;
 }

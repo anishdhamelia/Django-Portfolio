@@ -25,37 +25,35 @@
                         <h1 id="about-name">Hi, I am Anishkumar</h1>
                         <p id="about-title">a proficient computer science engineer. My expertise lies in software development and data analytics, where I have successfully implemented advanced technological solutions in the fields such as Quantum Computing, Artificial Intelligence and Web Development . I thrive in blending complex algorithms with practical applications and my career is marked by a commitment to groundbreaking research and technical excellence.</p>
                         <div id="about-quote-box"><p id="about-quote">"Programming is like building a circuit-board, with given inputs and their desired outputs. Our goal as developers is to wire these inputs with their outputs using the least amount of time and space." ~ me</p></div>
+
+                        <div class="popup-container" id="popup-container">
+                            <div class="popup" id="popup">
+                                <img id="popup-image" src="">
+                                <div id="popup-info">
+                                    <h1 class="popup-info-text" id="popup-university"></h1>
+                                    <h1 class="popup-info-text" id="popup-gpa"></h1>
+                                    <h1 class="popup-info-text" id="popup-year"></h1>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="container-content-2-item" id="education">
-                        <div class="card education-box" id="master-degree">
-                          <div class="card-image">
-                            <figure class="image is-4by3">
-                              <img src="{% static  'images/master_degree.png' %}" alt="Placeholder image">
-                            </figure>
-                          </div>
+                        <div class="education-box" id="master-degree">
+                            <img src="{% static  'images/master_degree.png' %}" alt="master_degree.png" class="degree-image">
                         </div>
-                        <div class="card education-box" id="bachelor-degree">
-                          <div class="card-image">
-                            <figure class="image is-4by3">
-                              <img src="{% static  'images/bachelor_degree.png' %}" alt="Placeholder image">
-                            </figure>
-                          </div>
+                        <div class="education-box" id="bachelor-degree">
+                            <img src="{% static  'images/bachelor_degree.png' %}" alt="bachelor_degree.png" class="degree-image">
                         </div>
-
-                        <div class="popup-container" id="popup-container">
-                        <div class="popup" id="popup">
-                            <span class="close" id="close">&times;</span>
-                            <img id="popup-image" src="" alt="Large image">
-                        </div>
-                        </div>
-
                     </div>
 
-                    </div>
+
                 </div>
-            </div>
+             </div>
         </div>
+
         <div id="container-3" class="container-item">
              <div class="background-image" style="background-image: url('{% static 'images/background_3.jpg' %}')">
                 <!-- Content goes here -->
