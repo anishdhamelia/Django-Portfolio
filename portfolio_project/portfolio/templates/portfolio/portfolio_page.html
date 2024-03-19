@@ -65,7 +65,7 @@
                                  <h1>Stock Manager Website</h1>
                                  <div class="head-description-hidden" hidden>
                                      <p>This Django project is designed to display shares information obtained from an external API. It includes a web application that fetches data from the API, processes it, and presents it to the user.</p>
-                                     <a href="https://github.com/anishsahilsiya/Django-Shares-API-Project" class="head-description-button" target="_blank"><i class="fab fa-github" id="github"></i></a>
+                                     <a href="https://github.com/anishsahilsiya/Django-Shares-API-Project" class="head-description-button" target="_blank"><i class="fab fa-github github"></i></a>
                                  </div>
                                  <div class="head-description-tag">
                                      <span class="head-tag">Django</span>
@@ -88,7 +88,7 @@
                                  <h1>Hit-Song Prediction</h1>
                                  <div class="head-description-hidden" hidden>
                                      <p>This project is a predictive model that can identify potential hit songs based on various musical features. The songs are obtained from the Spotify API that have featured in the Billboard Top 100.</p>
-                                     <a href="https://github.com/anishsahilsiya/Hit-Song-Prediction-using-Machine-Learning" class="head-description-button" target="_blank"><i class="fab fa-github" id="github"></i></a>
+                                     <a href="https://github.com/anishsahilsiya/Hit-Song-Prediction-using-Machine-Learning" class="head-description-button" target="_blank"><i class="fab fa-github github"></i></a>
                                  </div>
                                  <div class="head-description-tag">
                                      <span class="head-tag">Machine-learning</span>
@@ -110,7 +110,7 @@
                                  <h1>Stevens Stack Overflow</h1>
                                  <div class="head-description-hidden" hidden>
                                      <p>This project aims to recreate the essential features of Stack Overflow, providing a platform for students and teachers to ask and answer questions, share knowledge, and collaborate with the community.</p>
-                                     <a href="https://github.com/anishsahilsiya/Stevens-Stack-Overflow" class="head-description-button" target="_blank"><i class="fab fa-github" id="github"></i></a>
+                                     <a href="https://github.com/anishsahilsiya/Stevens-Stack-Overflow" class="head-description-button" target="_blank"><i class="fab fa-github github"></i></a>
                                  </div>
                                  <div class="head-description-tag">
                                      <span class="head-tag">Node.js</span>
@@ -132,7 +132,7 @@
                                  <h1>Image Captioning</h1>
                                  <div class="head-description-hidden" hidden>
                                      <p>This tool is designed to facilitate the training, evaluation, and inference of image captioning models. The application enables users to generate descriptive captions for images automatically.</p>
-                                     <a href="https://github.com/anishsahilsiya/Image-Captioning-using-Deep-Learning" class="head-description-button" target="_blank"><i class="fab fa-github" id="github"></i></a>
+                                     <a href="https://github.com/anishsahilsiya/Image-Captioning-using-Deep-Learning" class="head-description-button" target="_blank"><i class="fab fa-github github"></i></a>
                                  </div>
                                  <div class="head-description-tag">
                                      <span class="head-tag">Deep-Learning</span>
@@ -151,7 +151,7 @@
                                  <h1>SLAM algorithm</h1>
                                  <div class="head-description-hidden" hidden>
                                      <p>This project is focused on demonstrating the capabilities of Simultaneous Localization and Mapping (SLAM) algorithms in generating a map of a robot's path in an environment.</p>
-                                     <a href="https://github.com/anishsahilsiya/SLAM-Algorithm-Implementation" class="head-description-button" target="_blank"><i class="fab fa-github" id="github"></i></a>
+                                     <a href="https://github.com/anishsahilsiya/SLAM-Algorithm-Implementation" class="head-description-button" target="_blank"><i class="fab fa-github github"></i></a>
                                  </div>
                                  <div class="head-description-tag">
                                      <span class="head-tag">MATLAB</span>
@@ -169,7 +169,81 @@
 
         <div id="container-4" class="container-item">
              <div class="background-image" style="background-image: url('{% static 'images/background_4.jpg' %}')">
-                <!-- Content goes here -->
+                <div class="container-content-4">
+                    <div class="container-content-4-box">
+                        <div class="progress-container">
+                            <div id="customProgressBar" class="progress-bar"></div>
+                        </div>
+                        <div class="form-box">
+                            <button id="changeButton" class="form-button">Send me an email</button>
+                            <div hidden class="form-input">
+                                <div class="form-item" id="name-left"><a><i class="material-icons">keyboard_arrow_left</i></a></div>
+                                
+                                <div class="form-content">
+                                    <h1>Your Name</h1>
+                                    <input type="text" id="form-name">
+                                    <p class="form-error" id="name-error"></p>
+                                </div>
+                                
+                                <div class="form-item" id="name-right"><a><i class="material-icons">keyboard_arrow_right</i></a></div>
+                            </div>
+
+                            <div hidden class="form-input-1">
+                                <div class="form-item" id="email-left"><a><i class="material-icons">keyboard_arrow_left</i></a></div>
+
+                                <div class="form-content">
+                                    <h1>Your Email</h1>
+                                    <input type="text" id="form-email">
+                                    <p class="form-error" id="email-error"></p>
+                                </div>
+
+                                <div class="form-item" id="email-right"><a><i class="material-icons">keyboard_arrow_right</i></a></div>
+                            </div>
+
+                            <div hidden class="form-input-2">
+                                <div class="form-item" id="message-left"><a><i class="material-icons">keyboard_arrow_left</i></a></div>
+
+                                <div class="form-content">
+                                    <h1>Your Message</h1>
+                                    <input type="text" id="form-message">
+                                    <p class="form-error" id="message-error"></p>
+                                </div>
+
+                                <div class="form-item" id="message-right"><a><i class="material-icons">keyboard_arrow_right</i></a></div>
+                            </div>
+
+                            <div hidden class="form-input-3">
+                                <div class="form-item" id="final-left"><a><i class="material-icons">keyboard_arrow_left</i></a></div>
+
+                                <div class="form-content">
+                                    <div class="text-container">
+                                        <h1>Name: </h1>
+                                        <h1 class="form-text" id="final-name"></h1>
+                                    </div>
+                                    <div class="text-container">
+                                        <h1>Email: </h1>
+                                        <h1 class="form-text" id="final-email"></h1>
+                                    </div>
+
+                                    <h1>Message:</h1>
+                                    <h1 class="form-text" id="final-message"></h1>
+
+                                </div>
+
+                                <div class="form-item" id="final-right"><a><i class="material-icons">mail_outline</i></a></div>
+                                <div hidden data-ajax-url="{% url 'portfolio:send_email' %}" id="url"></div>
+                                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+
+                            </div>
+
+                            <div id="mail-sent">
+                                <i class="material-icons">mark_email_read</i>
+                                <p>Mail sent</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
