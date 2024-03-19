@@ -12,15 +12,15 @@ html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
 }
+
 .navbar {
-    background-color: #220026;
+    background-color: rgba(0, 0, 0, 0.3);
     height: auto;
     font-family: "Big Shoulders Inline Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-size: 1.5vw;
     font-style: normal;
-    opacity: 0.9;
 }
 
 .navbar-brand .navbar-item .nav-burger {
@@ -28,10 +28,24 @@ html {
 }
 
 .navbar-item {
-    color: #DDA959;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.navbar-item:hover {
+   transform: scale(1.1);
+}
+
+.logo-box {
+    height: 100%;
+    margin-left: 2%;
 }
 
 #logo {
     min-height: 4vw;
     min-width: 4vw;
+}
+
+.navbar-item:hover {
+    color: #220026;
 }

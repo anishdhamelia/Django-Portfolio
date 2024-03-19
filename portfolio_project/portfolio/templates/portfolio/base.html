@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
     <!-- import custom css and js -->
@@ -34,14 +35,14 @@
     <!-- Navbar -->
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-        <a class="navbar-item" href="{% url 'portfolio:portfolio_page' %}">
-          <img src="{% static  'images/logo.png' %}" id="logo">
-        </a>
-        <a class="navbar-item">About</a>
-        <a class="navbar-item">Skills</a>
-        <a class="navbar-item">Experience</a>
-        <a class="navbar-item">Projects</a>
-        <a class="navbar-item">Contact</a>
+            <div class="logo-box">
+                <a class="navbar-item" href="{% url 'portfolio:portfolio_page' %}" data-target="#container-1">
+                    <img src="{% static  'images/logo.png' %}" id="logo">
+            </a>
+            </div>
+        <a class="navbar-item" data-target="#container-2">About</a>
+        <a class="navbar-item" data-target="#container-3">Projects</a>
+        <a class="navbar-item" data-target="#container-4">Contact</a>
       </div>
     </nav>
 
