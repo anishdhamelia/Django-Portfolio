@@ -176,6 +176,7 @@
                         </div>
                         <div class="form-box">
                             <button id="changeButton" class="form-button">Send me an email</button>
+
                             <div hidden class="form-input">
                                 <div class="form-item" id="name-left"><a><i class="material-icons">keyboard_arrow_left</i></a></div>
                                 
@@ -227,12 +228,14 @@
 
                                     <h1>Message:</h1>
                                     <h1 class="form-text" id="final-message"></h1>
+                                    <input type="hidden"  id="form-final">
 
                                 </div>
 
                                 <div class="form-item" id="final-right"><a><i class="material-icons">mail_outline</i></a></div>
                                 <div hidden data-ajax-url="{% url 'portfolio:send_email' %}" id="url"></div>
                                 <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+
 
                             </div>
 

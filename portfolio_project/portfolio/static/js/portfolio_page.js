@@ -138,24 +138,16 @@ $(document).ready(function() {
             }
         }, 1);
     }
-
-
     $('#changeButton').click(function(){
         animateProgressBar(25, 10, "forward");
         $('#changeButton').fadeOut('fast', function() {
             $('.form-input').fadeIn('fast');
             $('.form-input').css("display", "flex");
+            $('#form-name').focus();
         });
     });
 
-    $('#name-left').click(function() {
-        animateProgressBar(0, 10, 'backward');
-        $('.form-input').fadeOut('fast', function() {
-            $('#changeButton').fadeIn('fast');
-        });
-    });
-
-    $('#name-right').click(function() {
+    function nameFormRight() {
         // Validate input name
         var name = $('#form-name').val().trim();
 
@@ -178,19 +170,39 @@ $(document).ready(function() {
             $('.form-input').fadeOut('fast', function() {
                 $('.form-input-1').fadeIn('fast');
                 $('.form-input-1').css("display", "flex");
+                $('#form-email').focus();
             });
         }
+
+    }
+
+    function nameFormLeft() {
+        animateProgressBar(0, 10, 'backward');
+        $('.form-input').fadeOut('fast', function() {
+            $('#changeButton').fadeIn('fast');
+        });
+
+    }
+
+    $('#name-left').click(function() {
+        nameFormLeft();
     });
 
-    $('#email-left').click(function() {
+
+    $('#name-right').click(function() {
+            nameFormRight();
+    });
+
+    function emailFormLeft() {
         animateProgressBar(25, 10, 'backward');
         $('.form-input-1').fadeOut('fast', function() {
             $('.form-input').fadeIn('fast');
             $('.form-input').css("display", "flex");
+            $('#form-name').focus();
         });
-    });
+    }
 
-    $('#email-right').click(function() {
+    function emailFormRight() {
         // Validate input email
         var email = $('#form-email').val().trim();
 
@@ -213,19 +225,29 @@ $(document).ready(function() {
             $('.form-input-1').fadeOut('fast', function() {
                 $('.form-input-2').fadeIn('fast');
                 $('.form-input-2').css("display", "flex");
+                $('#form-message').focus();
             });
         }
+    }
+
+    $('#email-left').click(function() {
+        emailFormLeft();
     });
 
-    $('#message-left').click(function() {
+    $('#email-right').click(function() {
+        emailFormRight();
+    });
+
+    function messageFormLeft() {
         animateProgressBar(50, 10, 'backward');
         $('.form-input-2').fadeOut('fast', function() {
             $('.form-input-1').fadeIn('fast');
             $('.form-input-1').css("display", "flex");
+            $('#form-email').focus();
         });
-    });
+    }
 
-    $('#message-right').click(function() {
+    function messageFormRight() {
         // Validate input message
         var message = $('#form-message').val().trim();
 
@@ -248,6 +270,7 @@ $(document).ready(function() {
             $('.form-input-2').fadeOut('fast', function() {
                 $('.form-input-3').fadeIn('fast');
                 $('.form-input-3').css("display", "flex");
+                $('#form-final').focus();
 
                 //add the current values
                 var name = $('#form-name').val().trim();
@@ -260,17 +283,27 @@ $(document).ready(function() {
 
             });
         }
+
+    }
+
+    $('#message-left').click(function() {
+        messageFormLeft();
     });
 
-    $('#final-left').click(function() {
+    $('#message-right').click(function() {
+        messageFormRight();
+    });
+
+    function finalFormLeft() {
         animateProgressBar(75, 10, 'backward');
         $('.form-input-3').fadeOut('fast', function() {
             $('.form-input-2').fadeIn('fast');
             $('.form-input-2').css("display", "flex");
+            $('#form-message').focus();
         });
-    });
+    }
 
-    $('#final-right').click(function() {
+    function finalFormRight() {
         var url = $('#url').data('ajax-url');
         // Get form data
         var formData = {
@@ -306,12 +339,58 @@ $(document).ready(function() {
                 $('#form-name').val("");
                 $('#form-email').val("");
                 $('#form-message').val("");
+                $('#form-final').val("");
                 animateProgressBar(0, 150, 'backward');
                 $('.form-input-3').fadeOut('slow', function() {
                     $('#changeButton').fadeIn('slow');
                 });
             }, 2000);
+
+    }
+
+    $('#final-left').click(function() {
+        finalFormLeft();
     });
 
+    $('#final-right').click(function() {
+        finalFormRight();
+    });
+
+    var debounceTimer;
+
+    $(document).on('keydown', function(event) {
+        clearTimeout(debounceTimer);
+
+        debounceTimer = setTimeout(function() {
+            if (event.which === 13) {
+                if ($('#form-name').is(':focus')) {
+                    nameFormRight();
+                }
+                else if ($('#form-email').is(':focus')) {
+                    emailFormRight();
+                }
+                else if ($('#form-message').is(':focus')) {
+                    messageFormRight();
+                }
+                else if ($('#form-final').is(':focus')) {
+                    finalFormRight();
+                }
+            }
+            else if (event.which === 27) {
+                if ($('#form-name').is(':focus')) {
+                    nameFormLeft();
+                }
+                else if ($('#form-email').is(':focus')) {
+                    emailFormLeft();
+                }
+                else if ($('#form-message').is(':focus')) {
+                    messageFormLeft();
+                }
+                else if ($('#form-final').is(':focus')) {
+                    finalFormLeft();
+                }
+            }
+        }, 100);
+    });
 
 });
